@@ -34,6 +34,12 @@ module.exports = function(grunt) {
                 files: ['src/data/**/*.json'],
                 tasks: ['assemble']
             },
+
+            hbs: { 
+                files: ['src/**/*.hbs'],
+                tasks: ['assemble']
+            },
+
             livereload: {
                 options: {
                     livereload: 35729
@@ -145,6 +151,14 @@ module.exports = function(grunt) {
                     dest: 'build/assets/img/'
                 }, ],
             },
+            css: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/assets/css/',
+                    src: '**/*',
+                    dest: 'build/assets/css/'
+                }, ],
+            },
             fonts: {
                 files: [{
                     expand: true,
@@ -187,7 +201,23 @@ module.exports = function(grunt) {
             js: ['build/assets/js'],
             css: ['build/assets/css'],
             img: ['build/assets/img']
+        },
+
+        pure_grids: {
+            dest: 'build/assets/css/main-grid.css',
+
+            options: {
+                units: 12, //12- column grid
+
+                mediaQueries: {
+                    sm: 'screen and (min-width: 35.5em)', // 568px
+                    md: 'screen and (min-width: 48em)',   // 768px
+                    lg: 'screen and (min-width: 64em)',   // 1024px
+                    xl: 'screen and (min-width: 80em)'    // 1280px
+                }
+            }
         }
+
     });
 
     grunt.loadNpmTasks('assemble'); // Special case
@@ -203,8 +233,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'clean',
-        // 'jshint',
+        'jshint',
         'assemble',
+        'pure_grids',
         'compass',
         'copy',
         'cssmin',

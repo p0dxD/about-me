@@ -1,0 +1,97 @@
+.center_box{
+    background-color: white;
+    border-radius: 30px 150px 30px 150px;
+    width: 33vw;
+    height: 800px;
+    margin: 0px auto 50px auto;
+    border: 5px inset bisque;
+}
+
+
+.navigation{
+	width: 50px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
+}
+
+.portrait{
+    background-color: white;
+    background-image: url("../img/profile.png");
+    background-size: auto 100%;
+    height: 200px;
+    width: 200px;
+    margin: 95px auto -70px auto;
+    border-radius: 100px;
+    border: 9px solid black;
+    position: relative;
+
+}
+
+.center_box_container{
+    position: relative;
+}
+
+.about-text{
+    padding: 10px 15px 10px 15px;
+}
+
+
+//for the animation
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.scene {
+  padding: 0;
+  margin: 0;
+}
+
+
+.expand-width {
+  width: 100%;
+}
+
+.aspect {
+  opacity: 0.2;
+}
+
+.layer:nth-child(1) {
+  opacity: 0.15;
+}
+
+
+.layer:nth-child(2) {
+  opacity: 0.30;
+}
+
+
+.layer:nth-child(3) {
+  opacity: 0.45;
+}
+
+
+.layer:nth-child(4) {
+  opacity: 0.60;
+}
+
+
+.layer:nth-child(5) {
+  opacity: 0.75;
+}
+
+.layer:nth-child(6) {
+  opacity: 0.90;
+}
+
