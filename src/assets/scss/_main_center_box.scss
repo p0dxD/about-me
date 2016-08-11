@@ -46,7 +46,7 @@ img {
   width: 100%;
 }
 
-.container {
+.container-scene {
   position: relative;
   max-width: 600px;
   margin: 0 auto;
@@ -95,3 +95,41 @@ img {
   opacity: 0.90;
 }
 
+.selection-ring{
+  background-color: blue;
+}
+
+#name{
+  height: 100px;
+}
+
+.selection-ring {
+    border: 3px solid #999;
+    -webkit-border-radius: 30px;
+    height: 18px;
+    width: 18px;
+    position: relative;
+    left: -35px;
+    top: -26px;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0;
+    &:hover {
+
+      -webkit-animation: 0;
+
+      position: relative;
+          height: 100px;
+    width: 100px;
+          left: -35px;
+    top: -26px;
+          background-color:blue;
+      opacity: 3.0;
+    }
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+  }
