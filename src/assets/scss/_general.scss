@@ -3,6 +3,10 @@
 	margin: 0;
 }
 
+html, body{
+	min-height:100%;
+}
+
 body{
 	background-color: #fdf6e3;
 	background-image: url("../img/background.jpg");
