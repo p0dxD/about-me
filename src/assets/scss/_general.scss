@@ -4,7 +4,7 @@
 }
 
 html, body{
-	min-height:100%;
+	// min-height:100%;
 }
 
 body{
@@ -13,10 +13,19 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 	font-family: $font-stack;
+	// height: 100vh;
 }
 
-footer > div{
+footer{
 	height: 50px; 
 	background-color: lightblue;
-	bottom: 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container{
+	height:100%;
+	position: relative;
+	    margin-bottom: 389px;
 }

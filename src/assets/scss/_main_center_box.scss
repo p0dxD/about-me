@@ -3,7 +3,7 @@
     border-radius: 30px 150px 30px 150px;
     width: 33vw;
     height: 800px;
-    margin: 0px auto 50px auto;
+    margin: 0px auto 0px auto;
     border: 5px inset bisque;
 }
 
@@ -103,7 +103,9 @@ img {
   height: 100px;
 }
 
-.selection-ring {
+
+
+[class*="selection-ring"] {
     border: 3px solid #999;
     -webkit-border-radius: 30px;
     height: 18px;
@@ -133,3 +135,81 @@ img {
     50% {opacity: 1.0;}
     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
   }
+
+
+
+
+
+  .hexagon {
+  position: relative;
+  width: 300px; 
+  height: 173.21px;
+  background-color: #64C7CC;
+  margin: 86.60px 0;
+&:before,
+&:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+}
+
+&:before {
+  bottom: 100%;
+  border-bottom: 86.60px solid #64C7CC;
+}
+
+
+&:after {
+  top: 100%;
+  width: 0;
+  border-top: 86.60px solid #64C7CC;
+}
+
+
+}
+
+.selection-ring-2{
+  border: 5px solid orange;
+  height: 50px;
+  width: 50px;
+    top: -150px;
+    left: 118px;
+      &:hover {
+
+      -webkit-animation: 0;
+
+      position: relative;
+          height: 50px;
+    width: 50px;
+    top: -150px;
+    left: 118px;
+          background-color:blue;
+      opacity: 3.0;
+    }
+}
+
+
+.selection-ring-3{
+  border: 5px solid orange;
+  height: 50px;
+  width: 50px;
+    top: -146px;
+    left: 257px;
+      &:hover {
+
+      -webkit-animation: 0;
+
+      position: relative;
+          height: 50px;
+    width: 50px;
+    top: -146px;
+    left: 257px;
+          background-color:blue;
+      opacity: 1.0;
+      border: 3px solid #999;
+    }
+}
+
+
